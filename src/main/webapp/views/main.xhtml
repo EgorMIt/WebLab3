@@ -12,7 +12,7 @@
 
 <h:head>
     <title>Lab3</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="style.css" rel="stylesheet" type="text/css"/>-->
 </h:head>
 <h:body style="text-align: center">
     <div style="font-family: fantasy; font-size: 20px;">
@@ -54,8 +54,10 @@
                         R(1 ... 4):
                     </p:column>
                     <p:column>
-                        <p:slider for="r" minValue="1" maxValue="4" step="0.25" />
-                        <p:inputText id="r" disabled="true" value="#{pointDateBean.newPoint.r}"/>
+                        <p:slider for="r" minValue="1" maxValue="4" step="0.25" value="#{pointDateBean.newPoint.r}">
+                            <p:ajax update="r" />
+                        </p:slider>
+                        <p:inputText id="r" disabled="true" value="#{pointDateBean.newPoint.r}"  onchange="draw(1)"/>
                     </p:column>
                 </p:row>
             </h:panelGrid>
