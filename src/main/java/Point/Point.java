@@ -52,9 +52,9 @@ public class Point {
     }
 
     public void check(){
-        if((x*x + y*y <= r*r && x >= 0 && y <= 0) ||
-                (y-x/2 <= r/2 && x<=0 && y>=0) ||
-                (x>=0 && y>=0 && y<=r/2 && x<=r)){
+        if((x*x + y*y <= r*r && x <= 0 && y <= 0) ||
+                (y-2*x >= -r/2 && x>=0 && y<=0) ||
+                (x<=0 && y>=0 && y<=r && x>=r/2)){
             res =  "true";
         }else{
             res = "false";
