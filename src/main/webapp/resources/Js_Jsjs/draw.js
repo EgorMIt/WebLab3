@@ -23,7 +23,7 @@ canvas.onmousedown = function (e) {
         alert("???????? ?? ??????")
     }else {
         let out = document.getElementById("j_idt6:x");
-        out.value = rly_x
+        out.value = rly_x;
 
         out = document.getElementById("j_idt6:y");
         out.value = rly_y;
@@ -77,13 +77,13 @@ function draw(flag_draw){
     ctx.beginPath();
     ctx.moveTo(250, 250);
     //?????????? ?????? ?????
-    ctx.arc(250, 250, 200, 0 ,Math.PI/2, false);
+    ctx.arc(250, 250, 200, Math.PI/2 , Math.PI, false);
     //?????????? ????????????
-    ctx.fillRect(250, 250, 200, -100);
+    ctx.fillRect(250, 250, -100, -200);
     //?????????? ???????????
     ctx.moveTo(250,250);
-    ctx.lineTo(50,250);
-    ctx.lineTo(250,150);
+    ctx.lineTo(350,250);
+    ctx.lineTo(250,450);
     ctx.fill();
 
     ctx.fillStyle = "rgba(0, 0, 0, 1)";
