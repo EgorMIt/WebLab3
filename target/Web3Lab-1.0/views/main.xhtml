@@ -28,8 +28,9 @@
                         X(-2 ... 2):
                     </p:column>
                     <p:column>
-                        <p:slider for="x" minValue="-2" maxValue="2" step="0.5" />
-                        <p:inputText id="x" disabled="true" value="#{pointDateBean.newPoint.x}"/>
+                        <h:inputHidden id="x" value="#{pointDateBean.newPoint.x}"/>
+                        <p:slider for="x" display="x_out" minValue="-2" maxValue="2" step="0.5"/>
+                        <h:outputText id="x_out" value="#{pointDateBean.newPoint.x}"/>
                     </p:column>
                 </p:row>
                 <p:row>
@@ -54,10 +55,10 @@
                         R(1 ... 4):
                     </p:column>
                     <p:column>
-                        <p:slider for="r" minValue="1" maxValue="4" step="0.25">
-                            <p:ajax update="r" />
+                        <h:inputHidden id="r" value="#{pointDateBean.newPoint.r}"/>
+                        <p:slider for="r" display="r_out" minValue="1" maxValue="4" step="0.25">
                         </p:slider>
-                        <p:inputText id="r" disabled="true" value="#{pointDateBean.newPoint.r}"  onchange="draw(1)"/>
+                        <h:outputText id="r_out" value="#{pointDateBean.newPoint.r}" onchange="draw(1)"/>
                     </p:column>
                 </p:row>
             </h:panelGrid>

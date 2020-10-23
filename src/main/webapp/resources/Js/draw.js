@@ -20,7 +20,7 @@ canvas.onmousedown = function (e) {
     let rly_y = (-1) * value_r*((loc.y - 250)/200)
 
     if(rly_x > value_r || rly_y > value_r || rly_x < -1 * value_r || rly_y < -1 *value_r){
-        alert("Нажимаем на график")
+        alert("???????? ?? ??????")
     }else {
         let out = document.getElementById("j_idt6:x");
         out.value = rly_x
@@ -76,11 +76,11 @@ function draw(flag_draw){
     ctx.fillStyle = "rgba(91,95,201,1)";
     ctx.beginPath();
     ctx.moveTo(250, 250);
-    //отображаем сектор круга
+    //?????????? ?????? ?????
     ctx.arc(250, 250, 200, 0 ,Math.PI/2, false);
-    //отображаем прмоугольник
+    //?????????? ????????????
     ctx.fillRect(250, 250, 200, -100);
-    //отображаем треугольник
+    //?????????? ???????????
     ctx.moveTo(250,250);
     ctx.lineTo(50,250);
     ctx.lineTo(250,150);
