@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Lab3</title>
+
+    <style type="text/css">
+        body {
+            background: #949494
+        }
+        section {
+            background: black;
+            color: white;
+            border-radius: 1em;
+            padding: 1em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</h:head>
+
+<h:body style="text-align: center">
+    <div style="font-family: fantasy; font-size: 20px;">
+
+    </div>
+    <br/>
+    <h:form style="margin: 0 auto; padding: 1%; width: 30%">
+        <h3>Server analog clock</h3>
+        <p:clock displayMode="analog" mode="server" autoSync="true" syncInterval="10000"/>
+        <p:clock displayMode="digital" pattern="dd.MM.yyyy" mode="server" autoSync="true" syncInterval="10000"/>
+    </h:form>
+    <h:form style="border-width:2px; margin: 0 auto; padding: 1%; border-color:#949494; border-style:solid; width: 35%">
+        <p:button outcome="to_main" value="Go to test Lab" icon="pi" style="text-align: center"/>
+    </h:form>
+</h:body>
+
+</html>
