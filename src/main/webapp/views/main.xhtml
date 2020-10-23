@@ -59,7 +59,10 @@
                     </p:column>
                 </p:row>
             </h:panelGrid>
-
+            <p:commandButton id="out_button"
+                             value="ВВОД"
+                             ajax="false"
+                             action="#{pointDateBean.doCode}"/>
         </p:panel>
     </h:form>
     <h:form style="border-width:2px; margin: 0 auto; padding: 1%; border-color:#949494; border-style:solid; width: 35%">
