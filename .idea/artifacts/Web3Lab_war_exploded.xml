@@ -13,6 +13,13 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Web3Lab" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.18" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.18" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
+          <element id="library" level="project" name="Maven: org.primefaces.themes:all-themes:1.0.10" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.12" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Web3Lab-1.0/META-INF/MANIFEST.MF" />
