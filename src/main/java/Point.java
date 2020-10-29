@@ -1,30 +1,19 @@
-import lombok.*;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
-
-@Data
-@EqualsAndHashCode
-@NoArgsConstructor
-@AllArgsConstructor
-@ManagedBean(name = "point")
-@SessionScoped
 
 public class Point implements Serializable {
 
-    private double x_value;
-    private double y_value;
-    private int r_value;
+    private double x;
+    private double y;
+    private int r;
     private String res;
-    private String jsessionid;
+    private String owner;
 
-    public String getJsessionid() {
-        return jsessionid;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setJsessionid(String jsessionid) {
-        this.jsessionid = jsessionid;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public String getRes() {
@@ -35,37 +24,47 @@ public class Point implements Serializable {
         this.res = res;
     }
 
-    public double getY_value() {
-        return y_value;
+    public double getY() {
+        return y;
     }
 
-    public void setY_value(double y_value) {
-        this.y_value = y_value;
+    public void setY(double y) {
+        this.y = y;
     }
 
-    public double getX_value() {
-        return x_value;
+    public double getX() {
+        return x;
     }
 
-    public void setX_value(double x_value) {
-        this.x_value = x_value;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public int getR_value() {
-        return r_value;
+    public int getR() {
+        return r;
     }
 
-    public void setR_value(int r_value) {
-        this.r_value = r_value;
+    public void setR(int r) {
+        this.r = r;
     }
 
     @Override
     public String toString() {
         return "<tr>" +
-                "<td>" + this.x_value + "</td>" +
-                "<td>" + this.y_value + "</td>" +
-                "<td>" + this.r_value + "</td>" +
+                "<td>" + this.x + "</td>" +
+                "<td>" + this.y + "</td>" +
+                "<td>" + this.r + "</td>" +
                 "<td>" + this.res + "</td>" +
                 "</tr>";
+    }
+
+    public void check() {
+        if ((x * x + y * y <= r * r && x <= 0 && y <= 0) ||
+                (y - 2 * x >= -r / 2 && x >= 0 && y <= 0) ||
+                (x <= 0 && y >= 0 && y <= r && x >= r / 2)) {
+            res = "Входит";
+        } else {
+            res = "Не входит";
+        }
     }
 }
