@@ -11,7 +11,6 @@ import java.io.Serializable;
 @ManagedBean(name = "point")
 @SessionScoped
 
-//Model
 public class Point implements Serializable {
 
     private double x_value;
