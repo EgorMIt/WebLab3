@@ -48,7 +48,6 @@
             <artifactId>primefaces</artifactId>
             <version>7.0</version>
         </dependency>
-
         <!--Primefaces themes-->
         <!--Primefaces темы-->
         <dependency>
@@ -56,8 +55,6 @@
             <artifactId>all-themes</artifactId>
             <version>1.0.10</version>
         </dependency>
-
-
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -76,13 +73,23 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.12</version>
         </dependency>
 
+        <!--Вовины , не трогайте -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.10.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
