@@ -14,6 +14,7 @@
           <element id="module-output" name="Web3Lab" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.jcraft:jsch:0.1.55" />
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.18" />
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.18" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />

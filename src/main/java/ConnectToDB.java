@@ -27,6 +27,7 @@ public class ConnectToDB {
 
         try {
             connection = dataSource.getConnection();
+            //connection = DatabaseCommunicator.getConnection();
             connection.createStatement().execute(
                     "create table if not exists results (" +
                             "x float , y float, r float, res text, owner text)"
@@ -77,11 +78,11 @@ public class ConnectToDB {
         return pointsList;
     }
 
-    public DataSource getDataSource() {
+    /*public DataSource getDataSource() {
         return dataSource;
     }
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
-    }
+    }*/
 }
