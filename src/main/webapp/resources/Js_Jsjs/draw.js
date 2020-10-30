@@ -20,7 +20,7 @@ canvas.onmousedown = function (e) {
     let rly_y = (-1) * value_r*((loc.y - 250)/200)
 
     if(rly_x > value_r || rly_y > value_r || rly_x < -1 * value_r || rly_y < -1 *value_r){
-        alert("???????? ?? ??????")
+        alert("Input error!")
     }else {
         let out = document.getElementById("j_idt6:x");
         out.value = rly_x;
@@ -50,9 +50,9 @@ function set_r_value(flag_draw){
     }
 }
 
-function drawPoint(x,y,r, res) {
-    let flagger = x > r || y > r || x < -1 * r || y < -1 *r;
-    if(!flagger){
+function drawPoint(x, y, r, res) {
+    let flag = x > r || y > r || x < -1 * r || y < -1 *r;
+    if(!flag){
         ctx.beginPath();
 
         if(res === "true") {

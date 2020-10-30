@@ -11,7 +11,7 @@ public class PointDateBean implements Serializable {
 
     UUID owner = UUID.randomUUID();
 
-    private final Connect_to_oracle oracle_db = new Connect_to_oracle();
+    private final ConnectToDB oracle_db = new ConnectToDB();
 
     private Point newPoint;
 

@@ -11,7 +11,7 @@ import java.util.List;
 
 @ManagedBean
 @ApplicationScoped
-public class Connect_to_oracle {
+public class ConnectToDB {
     private DataSource dataSource;
 
     private Connection connection;
@@ -71,8 +71,8 @@ public class Connect_to_oracle {
                     pointsList.add(0,point);
                 }
             }
-        }catch (SQLException | NamingException throwables) {
-            throwables.printStackTrace();
+        }catch (SQLException | NamingException throwable) {
+            throwable.printStackTrace();
         }
         return pointsList;
     }
