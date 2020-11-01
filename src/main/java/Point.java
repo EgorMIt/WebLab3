@@ -4,7 +4,7 @@ public class Point implements Serializable {
 
     private double x;
     private double y;
-    private int r;
+    private float r;
     private String res;
     private String owner;
 
@@ -20,7 +20,7 @@ public class Point implements Serializable {
         return res;
     }
 
-    public void setRes(String hit_result) {
+    public void setRes(String res) {
         this.res = res;
     }
 
@@ -40,11 +40,11 @@ public class Point implements Serializable {
         this.x = x;
     }
 
-    public int getR() {
+    public float getR() {
         return r;
     }
 
-    public void setR(int r) {
+    public void setR(float r) {
         this.r = r;
     }
 
@@ -61,10 +61,10 @@ public class Point implements Serializable {
     public void check() {
         if ((x * x + y * y <= r * r && x <= 0 && y <= 0) ||
                 (y - 2 * x >= -r / 2 && x >= 0 && y <= 0) ||
-                (x <= 0 && y >= 0 && y <= r && x >= r / 2)) {
-            res = "Входит";
+                (y <= r && x >= -r / 2 &&  x <= 0 && y >= 0)) {
+            res = "True";
         } else {
-            res = "Не входит";
+            res = "False";
         }
     }
 }

@@ -28,8 +28,9 @@ public class ConnectToDB {
         try {
             connection = dataSource.getConnection();
             //connection = DatabaseCommunicator.getConnection();
-            connection.createStatement().executeQuery(
-                    " CREATE TABLE IF NOT EXISTS results(x FLOAT , y FLOAT, r FLOAT, res text , owner text ) "
+            connection.createStatement().execute(
+                    "create table if not exists results (" +
+                            "x float , y float, r float, res text, owner text)"
             );
         } catch (SQLException e) {
             throw new IllegalStateException("Couldn't create connection", e);
@@ -65,7 +66,7 @@ public class ConnectToDB {
                 Point point = new Point();
                 point.setX(rs.getFloat("x"));
                 point.setY(rs.getFloat("y"));
-                point.setR(rs.getInt("r"));
+                point.setR(rs.getFloat("r"));
                 point.setRes(rs.getString("res"));
                 if (rs.getString("owner").equals(session_id)) {
                     pointsList.add(0,point);

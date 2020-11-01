@@ -51,11 +51,13 @@ function set_r_value(flag_draw){
 }
 
 function drawPoint(x, y, r, res) {
-    let flag = x > r || y > r || x < -1 * r || y < -1 *r;
+    let flag = x > r || y > r || x < -1 * r || y < -1 * r;
     if(!flag){
         ctx.beginPath();
 
-        if(res === "true") {
+        if ((x * x + y * y <= r * r && x <= 0 && y <= 0) ||
+            (y - 2 * x >= -r / 2 && x >= 0 && y <= 0) ||
+            (y <= r && x >= -r / 2 &&  x <= 0 && y >= 0)) {
             ctx.fillStyle = "rgba(0, 255, 0, 1)";
         }else{
             ctx.fillStyle = "rgba(255, 0, 0, 1)";
@@ -141,13 +143,13 @@ function draw(flag_draw){
     ctx.closePath();
     ctx.stroke();
 
-    chekTableAndDraw()
+    checkTableAndDraw()
 }
 
 
-function chekTableAndDraw(){
+function checkTableAndDraw(){
     let cells = Array.prototype.slice.call(document.getElementById("table_out_data").getElementsByTagName("td"));
-    let n = cells.length
+    let n = cells.length;
     if(Number(cells[2].innerHTML) !== 0){
         for(let i = 0; i < n; i=i+4){
             drawPoint(Number(cells[i].innerHTML),
