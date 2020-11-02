@@ -4,7 +4,7 @@ public class Point implements Serializable {
 
     private double x;
     private double y;
-    private float r;
+    private float r = 1;
     private String res;
     private String owner;
 
@@ -60,7 +60,7 @@ public class Point implements Serializable {
 
     public void check() {
         if ((x * x + y * y <= r * r && x <= 0 && y <= 0) ||
-                (y - 2 * x >= -r / 2 && x >= 0 && y <= 0) ||
+                (y - 2 * x >= -r && x >= 0 && y <= 0) ||
                 (y <= r && x >= -r / 2 &&  x <= 0 && y >= 0)) {
             res = "True";
         } else {

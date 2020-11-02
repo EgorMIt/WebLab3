@@ -55,9 +55,7 @@ function drawPoint(x, y, r, res) {
     if(!flag){
         ctx.beginPath();
 
-        if ((x * x + y * y <= r * r && x <= 0 && y <= 0) ||
-            (y - 2 * x >= -r / 2 && x >= 0 && y <= 0) ||
-            (y <= r && x >= -r / 2 &&  x <= 0 && y >= 0)) {
+        if (res == "True") {
             ctx.fillStyle = "rgba(0, 255, 0, 1)";
         }else{
             ctx.fillStyle = "rgba(255, 0, 0, 1)";

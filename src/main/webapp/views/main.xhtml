@@ -55,8 +55,8 @@
                         R(1 ... 4):
                     </p:column>
                     <p:column>
-                        <h:inputHidden id="r" value="#{pointDateBean.newPoint.r}"/>
-                        <p:slider for="r" display="r_out" minValue="1" maxValue="4" step="0.25">
+                        <h:inputHidden id="r" value="#{pointDateBean.newPoint.r}" onchange="draw(1)"/>
+                        <p:slider for="r" display="r_out" minValue="1" maxValue="4" step="0.25" onchange="draw(1)">
                         </p:slider>
                         <h:outputText id="r_out" value="#{pointDateBean.newPoint.r}" onchange="draw(1)"/>
                     </p:column>
@@ -95,7 +95,7 @@
             </h:column>
         </h:dataTable>
     </h:panelGroup>
-    <h:outputScript library="Js_Js" name="draw.js"/>
+    <h:outputScript library="Js_J" name="draw.js"/>
 
 </h:body>
 </html>
